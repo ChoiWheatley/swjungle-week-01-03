@@ -1,4 +1,4 @@
-standard_input = "2"
+standard_input = "9"
 
 
 INDENTATION = "____"
