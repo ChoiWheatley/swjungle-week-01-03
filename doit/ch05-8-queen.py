@@ -19,7 +19,7 @@ se_visited = [False for _ in range(SIDE * 2 - 1)]
 
 def print_queens(pos: List[int]):
     global total
-    print([(row, col) for col, row in enumerate(pos)])
+    # print([(row, col) for col, row in enumerate(pos)])
     total += 1
 
 
