@@ -5,6 +5,7 @@
 from dataclasses import dataclass
 from typing import Any, List, Self, TypeVar, Type, Generic
 from abc import ABCMeta, abstractmethod
+from sys import stdin, stdout
 
 standard_input = """13
 but
@@ -123,3 +124,16 @@ class CustomComparable(Comparable):
 
     def __init__(self, string=None):
         self.key = "" if string is None else string
+
+
+if __name__ == "__main__":
+    heap = Heap(CustomComparable)
+    for word in stdin:
+        heap.insert(CustomComparable(word.strip()))
+    while len(heap):
+        value = heap.peek()
+        heap.pop()
+        if value:
+            stdout.write(value.key + "\n")
+        else:
+            break

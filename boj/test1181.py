@@ -17,7 +17,7 @@ class CustomComparator(Comparable):
 
 
 class Test(TestCase):
-    MAX_N = 5
+    MAX_N = 20_000
 
     def setUp(self) -> None:
         self.heap = Heap(CustomComparator)
