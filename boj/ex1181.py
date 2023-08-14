@@ -127,8 +127,9 @@ class CustomComparable(Comparable):
 
 
 if __name__ == "__main__":
+    trash = input()
     heap = Heap(CustomComparable)
-    for word in stdin:
+    for word in {e for e in stdin}:
         heap.insert(CustomComparable(word.strip()))
     while len(heap):
         value = heap.peek()
